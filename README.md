@@ -1,8 +1,6 @@
 🏗️**Architecture Microservices – Projet To-Do**
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![License](https://img.shields.io/badge/license-MIT-yellow)
 
 Ce Projet ne se limite pas à un simple CRUD, je suis en train de construire une architecture distribuée composé d'un service d'authentification, un service de gestion des tâches et d'un service de notifications, chaqun est indépendant avec sa propre base de données et exposé via un API Gateway et Eureka pour la découverte des services.
 
@@ -10,21 +8,82 @@ Ce Projet ne se limite pas à un simple CRUD, je suis en train de construire une
 
 📅 <span style="color:orange">***Roadmap des Sprints – Projet Microservices To-Do***</span>
 
-🔹 Sprint 1 - Service Tâches : Documentation & Tests
-Objectif : Finaliser le Service Tâches avec une documentation claire et des tests unitaires.
+## 🏁 Sprint 0 – Initialisation du projet
 
-Livrables : README, Swagger, Tests unitaires, Validation des données.
+### 🎯 Objectifs
+- Mise en place le dépôt GitHub (`todo-microservice`)
+- Création de la structure du microservice `task-service`
+- Configuration des branches principales (`main`, `develop`)
+- Création de la base de données `taskdb`
+- Développement des couches principales :
+  - **Entity** : `Task` (modèle de données)
+  - **Repository** : `TaskRepository` (interface JPA)
+  - **Service** : `TaskService` (logique métier CRUD)
+  - **Controller** : `TaskController` (endpoints REST)
+- Test des méthodes CRUD avec **Postman**
 
-🔹 Sprint 2 - Industrialisation
-Objectif : Préparer le projet pour le déploiement et l’intégration continue.
+### ✅ Réalisations
+- [x] Initial commit : `Projet task-service CRUD`
+- [x] Création des branches `main` et `develop`
+- [x] Base de données `taskdb` opérationnelle
+- [x] Endpoints CRUD testés avec Postman :
+  - **Create** → `POST /tasks`
+  - **Read** → `GET /tasks/{id}`
+  - **Update** → `PUT /tasks/{id}`
+  - **Delete** → `DELETE /tasks/{id}`
 
-Livrables : Dockerfile, docker-compose, GitHub Actions (CI/CD).
+---
 
-🔹 Sprint 3 - Architecture Microservices
-Objectif : Étendre le projet vers une architecture distribuée.
+## 🔹 Sprint 1 – Service Tâches : Documentation & Tests
 
-Livrables : Service Auth, Service Notifications, Eureka Server, API Gateway.
+### 🎯 Objectif
+Finalisation du Service Tâches avec une documentation claire et des tests unitaires.
 
-🔹 Sprint 4 - Déploiement Cloud : Déployer et finaliser la présentation du projet.
+### 📌 Issues
+- [x] [#1] `feature/doc` → Rédaction du README  
+- [x] [#2] `feature/swagger` → Ajout Swagger/OpenAPI pour documenter l'API  
+- [ ] [#3] `feature/tests` → Écriture des tests unitaires pour TaskService  
+- [ ] [#4] `feature/validation` → Ajout validation des données (`@NotBlank`, `@Size`)  
 
-Livrables : Déploiement Oracle/AWS, Diagramme d’architecture, README bilingue final.
+### 📦 Livrables
+- README
+- Swagger
+- Tests unitaires
+- Validation des données
+
+---
+
+## 🔹 Sprint 2 – Industrialisation
+
+### 🎯 Objectif
+Préparer le projet pour le déploiement et l’intégration continue.
+
+### 📦 Livrables
+- Dockerfile  
+- docker-compose  
+- GitHub Actions (CI/CD)
+
+---
+
+## 🔹 Sprint 3 – Architecture Microservices
+
+### 🎯 Objectif
+Étendre le projet vers une architecture distribuée.
+
+### 📦 Livrables
+- Service Auth  
+- Service Notifications  
+- Eureka Server  
+- API Gateway  
+
+---
+
+## 🔹 Sprint 4 – Déploiement Cloud
+
+### 🎯 Objectif
+Déployer et finaliser la présentation du projet.
+
+### 📦 Livrables
+- Déploiement Oracle/AWS  
+- Diagramme d’architecture  
+- README bilingue final
