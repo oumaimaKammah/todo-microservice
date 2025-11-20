@@ -1,6 +1,7 @@
 package com.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -23,30 +24,37 @@ public class TaskService {
         if (id == null) {
             return null;
         }
-        return repo.findById(id).orElse(null);
+        Optional<Task> taskOpt = repo.findById(id);
+        return taskOpt.orElse(null);
     }
 
     public Task createTask(Task task) {
-        if (task != null) {
-            return repo.save(task);
+        if (task == null) {
+            return null;
         }
-        System.out.println("TaskService: createTask received null task");
-        return null;
-
+        return repo.save(task);
     }
 
     public Task updateTask(Long id, Task updatedTask) {
+        if (updatedTask == null) {
+            return null;
+        }
         updatedTask.setId(id);
         return repo.save(updatedTask);
     }
 
     public void deleteTask(Long id) {
-        if (id == null) {
+        if (id != null) {
+            Optional<Task> taskOptional = repo.findById(id);
+            if (taskOptional.isPresent()) {
+                repo.deleteById(id);
+            } else {
+                System.out.println("TaskService: deleteTask - Task with id " + id + " does not exist.");
+            }
+        } else {
             System.out.println("TaskService: deleteTask received null id");
             return;
-
         }
-        repo.deleteById(id);
     }
 
 }
