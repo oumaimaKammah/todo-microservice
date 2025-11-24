@@ -42,8 +42,8 @@ Finalisation du Service Tâches avec une documentation claire et des tests unita
 ### 📌 Issues
 - [x] [#1] `feature/doc` → Rédaction du README  
 - [x] [#2] `feature/swagger` → Ajout Swagger/OpenAPI pour documenter l'API  -> La documentation interactive est disponible sur [Swagger UI](http://localhost:8082/swagger-ui.html) grâce à Springdoc OpenAPI.
-- [ ] [#3] `feature/tests` → Écriture des tests unitaires pour TaskService  
-- [ ] [#4] `feature/validation` → Ajout validation des données (`@NotBlank`, `@Size`)
+- [x] [#3] `feature/tests` → Écriture des tests unitaires pour TaskService  
+- [x] [#4] `feature/validation` → Ajout validation des données (`@NotBlank`, `@Size`)
 
  
 
