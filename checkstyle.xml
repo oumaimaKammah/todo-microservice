@@ -11,11 +11,6 @@
 
     <module name="TreeWalker">
         <module name="UnusedImports"/>
-        <module name="ImportOrder">
-            <property name="ordered" value="true"/>
-            <property name="separated" value="true"/>
-            <property name="option" value="top"/>
-        </module>
 
         <module name="TypeName"/>
 
