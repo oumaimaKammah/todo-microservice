@@ -4,9 +4,9 @@ services:
     build: .
     container_name: task-service
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/tasksdb
-      SPRING_DATASOURCE_USERNAME: user
-      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/taskdb
+      SPRING_DATASOURCE_USERNAME: okami
+      SPRING_DATASOURCE_PASSWORD: okamipass
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
       SPRING_JPA_HIBERNATE_SHOW_SQL: true
       SPRING_JPA_HIBERNATE_DIALECT: org.hibernate.dialect.PostgreSQLDialect
@@ -19,9 +19,9 @@ services:
     image: postgres:15
     container_name: task-db
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: tasksdb
+      POSTGRES_USER: okami
+      POSTGRES_PASSWORD: okamipass
+      POSTGRES_DB: taskdb
     ports:
       - "5432:5432"
     volumes:

@@ -4,9 +4,9 @@ spring:
   application:
     name: task-service
   datasource:
-    url: jdbc:postgresql://localhost:5432/tasksdb
-    username: user
-    password: password
+    url: jdbc:postgresql://localhost:5432/taskdb
+    username: okami
+    password: okamipass
   jpa:
     hibernate:
       ddl-auto: update
